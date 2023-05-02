@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "RrUh1IYvMsLFEyWvXCBlJKx0Jqc1vEyOPHWmD1WLUlTfTxtnD8CQlMBM/+BT55Wax5ppqvOIRf5W2YAKjbekYA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\berka\\OneDrive\\Masaüstü\\Main\\Project\\ETicaretUygulamasi\\ETicaretAPI\\Infrastructure\\ETicaretAPI.Persistence\\ETicaretAPI.Persistence.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\berka\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\7.0.0\\microsoft.extensions.dependencyinjection.abstractions.7.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
