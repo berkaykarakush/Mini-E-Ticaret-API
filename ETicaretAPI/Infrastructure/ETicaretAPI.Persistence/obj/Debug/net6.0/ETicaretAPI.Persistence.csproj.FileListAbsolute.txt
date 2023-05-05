@@ -15,3 +15,5 @@ C:\Users\berka\OneDrive\Masaüstü\Main\Project\ETicaretUygulamasi\ETicaretAPI\I
 C:\Users\berka\OneDrive\Masaüstü\Main\Project\ETicaretUygulamasi\ETicaretAPI\Infrastructure\ETicaretAPI.Persistence\bin\Debug\net6.0\ETicaretAPI.Application.pdb
 C:\Users\berka\OneDrive\Masaüstü\Main\Project\ETicaretUygulamasi\ETicaretAPI\Infrastructure\ETicaretAPI.Persistence\bin\Debug\net6.0\ETicaretAPI.Domain.pdb
 C:\Users\berka\OneDrive\Masaüstü\Main\Project\ETicaretUygulamasi\ETicaretAPI\Infrastructure\ETicaretAPI.Persistence\obj\Debug\net6.0\ETicaretAPI.Persistence.csproj.CopyComplete
+C:\Users\berka\OneDrive\Masaüstü\Main\Project\ETicaretUygulamasi\ETicaretAPI\Infrastructure\ETicaretAPI.Persistence\bin\Debug\net6.0\ETicaretAPI.Persistence.runtimeconfig.json
+C:\Users\berka\OneDrive\Masaüstü\Main\Project\ETicaretUygulamasi\ETicaretAPI\Infrastructure\ETicaretAPI.Persistence\obj\Debug\net6.0\ETicaretAPI.Persistence.genruntimeconfig.cache
