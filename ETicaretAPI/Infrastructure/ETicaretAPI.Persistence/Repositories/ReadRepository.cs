@@ -19,7 +19,6 @@ namespace ETicaretAPI.Persistence.Repositories
             _context = context;
         }
         public DbSet<T> Table => _context.Set<T>();
-        //Tracking Mekanizmasi db'den cekilen datalarin ef core tarafindan takip edilmesini saglamaktadir, db'den sorgu neticesinde eger ki sadece verileri listelemek yani uzerinde herhangi bir degisiklik yapmak istemiyorsak bu islemlerde ef core tracking mekanizmasini kapatarak bir optimizasyon gerceklestirebilirim
         public IQueryable<T> GetAll(bool tracking = true)
         {
             var query = Table.AsQueryable();
