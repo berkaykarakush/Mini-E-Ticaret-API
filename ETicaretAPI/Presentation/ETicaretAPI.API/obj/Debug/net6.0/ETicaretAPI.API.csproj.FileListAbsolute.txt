@@ -76,3 +76,6 @@ C:\Users\berka\OneDrive\Masaüstü\Main\Project\ETicaretUygulamasi\ETicaretAPI\P
 C:\Users\berka\OneDrive\Masaüstü\Main\Project\ETicaretUygulamasi\ETicaretAPI\Presentation\ETicaretAPI.API\bin\Debug\net6.0\Microsoft.Bcl.AsyncInterfaces.dll
 C:\Users\berka\OneDrive\Masaüstü\Main\Project\ETicaretUygulamasi\ETicaretAPI\Presentation\ETicaretAPI.API\bin\Debug\net6.0\System.IO.Hashing.dll
 C:\Users\berka\OneDrive\Masaüstü\Main\Project\ETicaretUygulamasi\ETicaretAPI\Presentation\ETicaretAPI.API\bin\Debug\net6.0\System.Memory.Data.dll
+C:\Users\berka\OneDrive\Masaüstü\Main\Project\ETicaretUygulamasi\ETicaretAPI\Presentation\ETicaretAPI.API\bin\Debug\net6.0\MediatR.dll
+C:\Users\berka\OneDrive\Masaüstü\Main\Project\ETicaretUygulamasi\ETicaretAPI\Presentation\ETicaretAPI.API\bin\Debug\net6.0\MediatR.Contracts.dll
+C:\Users\berka\OneDrive\Masaüstü\Main\Project\ETicaretUygulamasi\ETicaretAPI\Presentation\ETicaretAPI.API\bin\Debug\net6.0\MediatR.Extensions.Microsoft.DependencyInjection.dll
