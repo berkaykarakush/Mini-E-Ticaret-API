@@ -1,6 +1,4 @@
-﻿using ETicaretAPI.Application.Abstractions;
-using ETicaretAPI.Application.Abstractions.Storage;
-using ETicaretAPI.Application.Features.Commands.Product.CreateProduct;
+﻿using ETicaretAPI.Application.Features.Commands.Product.CreateProduct;
 using ETicaretAPI.Application.Features.Commands.Product.RemoveProduct;
 using ETicaretAPI.Application.Features.Commands.Product.UpdateProduct;
 using ETicaretAPI.Application.Features.Commands.ProductImageFile.RemoveProductImage;
@@ -8,63 +6,22 @@ using ETicaretAPI.Application.Features.Commands.ProductImageFile.UploadProductIm
 using ETicaretAPI.Application.Features.Queries.Product.GetAllProduct;
 using ETicaretAPI.Application.Features.Queries.Product.GetByIdProduct;
 using ETicaretAPI.Application.Features.Queries.ProductImageFile.GetProductImages;
-using ETicaretAPI.Application.Repositories;
-using ETicaretAPI.Application.RequestParameters;
-using ETicaretAPI.Application.ViewModels.Products;
-using ETicaretAPI.Domain.Entities;
 using MediatR;
-using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.OpenApi.Any;
 using System.Net;
-using System.Runtime.InteropServices;
 
 namespace ETicaretAPI.API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize(AuthenticationSchemes = "Admin")]
     public class ProductsController : ControllerBase
     {
-        private readonly IProductWriteRepository _productWriteRepository;
-        private readonly IProductReadRepository _productReadRepository;
-        private readonly IWebHostEnvironment _webHostEnvironment;
-        private readonly IFileReadRepository _fileReadRepository;
-        private readonly IFileWriteRepository _fileWriteRepository;
-        private readonly IProductImageFileReadRepository _productImageFileReadRepository;
-        private readonly IProductImageFileWriteRepository _productImageFileWriteRepository;
-        private readonly IInvoiceFileReadRepository _invoiceFileReadRepository;
-        private readonly IInvoiceFileWriteRepository _invoiceFileWriteRepository;
-        private readonly IStorageService _storageService;
-        private readonly IConfiguration _configuration;
-
         readonly IMediator _mediator;
 
-        public ProductsController(
-            IProductWriteRepository productWriteRepository,
-            IProductReadRepository productReadRepository,
-            IWebHostEnvironment webHostEnvironment,
-            IFileReadRepository fileReadRepository,
-            IFileWriteRepository fileWriteRepository,
-            IProductImageFileReadRepository productImageFileReadRepository,
-            IProductImageFileWriteRepository productImageFileWriteRepository,
-            IInvoiceFileReadRepository invoiceFileReadRepository,
-            IInvoiceFileWriteRepository invoiceFileWriteRepository,
-            IStorageService storageService,
-            IConfiguration configuration,
-            IMediator mediator)
+        public ProductsController(IMediator mediator)
         {
-            _productWriteRepository = productWriteRepository;
-            _productReadRepository = productReadRepository;
-            _webHostEnvironment = webHostEnvironment;
-            _fileReadRepository = fileReadRepository;
-            _fileWriteRepository = fileWriteRepository;
-            _productImageFileReadRepository = productImageFileReadRepository;
-            _productImageFileWriteRepository = productImageFileWriteRepository;
-            _invoiceFileReadRepository = invoiceFileReadRepository;
-            _invoiceFileWriteRepository = invoiceFileWriteRepository;
-            _storageService = storageService;
-            _configuration = configuration;
             _mediator = mediator;
         }
 
