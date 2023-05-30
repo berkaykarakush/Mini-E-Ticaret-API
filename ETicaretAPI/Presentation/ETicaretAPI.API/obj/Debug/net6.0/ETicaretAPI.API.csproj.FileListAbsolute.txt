@@ -92,3 +92,8 @@ C:\Users\berka\OneDrive\Masaüstü\Main\Project\ETicaretUygulamasi\ETicaretAPI\P
 C:\Users\berka\OneDrive\Masaüstü\Main\Project\ETicaretUygulamasi\ETicaretAPI\Presentation\ETicaretAPI.API\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
 C:\Users\berka\OneDrive\Masaüstü\Main\Project\ETicaretUygulamasi\ETicaretAPI\Presentation\ETicaretAPI.API\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
 C:\Users\berka\OneDrive\Masaüstü\Main\Project\ETicaretUygulamasi\ETicaretAPI\Presentation\ETicaretAPI.API\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\berka\OneDrive\Masaüstü\Main\Project\ETicaretUygulamasi\ETicaretAPI\Presentation\ETicaretAPI.API\bin\Debug\net6.0\Google.Apis.dll
+C:\Users\berka\OneDrive\Masaüstü\Main\Project\ETicaretUygulamasi\ETicaretAPI\Presentation\ETicaretAPI.API\bin\Debug\net6.0\Google.Apis.Auth.PlatformServices.dll
+C:\Users\berka\OneDrive\Masaüstü\Main\Project\ETicaretUygulamasi\ETicaretAPI\Presentation\ETicaretAPI.API\bin\Debug\net6.0\Google.Apis.Auth.dll
+C:\Users\berka\OneDrive\Masaüstü\Main\Project\ETicaretUygulamasi\ETicaretAPI\Presentation\ETicaretAPI.API\bin\Debug\net6.0\Google.Apis.Core.dll
+C:\Users\berka\OneDrive\Masaüstü\Main\Project\ETicaretUygulamasi\ETicaretAPI\Presentation\ETicaretAPI.API\bin\Debug\net6.0\Newtonsoft.Json.dll
