@@ -3,6 +3,7 @@ using ETicaretAPI.Application.DTOs;
 using Google.Apis.Auth;
 using MediatR;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.Extensions.Configuration;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,17 +17,19 @@ namespace ETicaretAPI.Application.Features.Commands.AppUser.GoogleLogin
     {
         readonly UserManager<Domain.Entities.Identity.AppUser> _userManager;
         readonly ITokenHandler _tokenHandler;
-        public GoogleLoginCommandHandler(UserManager<Domain.Entities.Identity.AppUser> userManager, ITokenHandler tokenHandler)
+        readonly IConfiguration _configuration;
+        public GoogleLoginCommandHandler(UserManager<Domain.Entities.Identity.AppUser> userManager, ITokenHandler tokenHandler, IConfiguration configuration)
         {
             _userManager = userManager;
             _tokenHandler = tokenHandler;
+            _configuration = configuration;
         }
 
         public async Task<GoogleLoginCommandResponse> Handle(GoogleLoginCommandRequest request, CancellationToken cancellationToken)
         {
             ValidationSettings? settings = new GoogleJsonWebSignature.ValidationSettings() 
             {
-                Audience = new List<string> { "654451652149-3e9ihhg7cnl4ps1nb3g23id6nbbss2ts.apps.googleusercontent.com" }
+                Audience = new List<string> { _configuration["Google:ClientId"] }
             };
 
             var payload = await GoogleJsonWebSignature.ValidateAsync(request.IdToken, settings);
