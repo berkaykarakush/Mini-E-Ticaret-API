@@ -875,7 +875,6 @@
           "FluentValidation": "11.5.2",
           "FluentValidation.AspNetCore": "11.3.0",
           "FluentValidation.DependencyInjectionExtensions": "11.5.2",
-          "Google.Apis.Auth": "1.57.0",
           "MediatR": "10.0.1",
           "MediatR.Extensions.Microsoft.DependencyInjection": "10.0.1",
           "Microsoft.EntityFrameworkCore": "7.0.5"
@@ -906,6 +905,7 @@
       "ETicaretAPI.Persistence/1.0.0": {
         "dependencies": {
           "ETicaretAPI.Application": "1.0.0",
+          "Google.Apis.Auth": "1.57.0",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "6.0.16",
           "Microsoft.EntityFrameworkCore": "7.0.5",
           "Microsoft.Extensions.Configuration": "7.0.0",
