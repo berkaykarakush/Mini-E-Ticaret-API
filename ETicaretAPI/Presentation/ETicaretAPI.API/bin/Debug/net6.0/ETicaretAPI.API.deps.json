@@ -11,6 +11,7 @@
           "ETicaretAPI.Application": "1.0.0",
           "ETicaretAPI.Infrastructure": "1.0.0",
           "ETicaretAPI.Persistence": "1.0.0",
+          "ETicaretAPI.SignalR": "1.0.0",
           "Microsoft.AspNetCore.Authentication.JwtBearer": "6.0.5",
           "Microsoft.EntityFrameworkCore.Design": "7.0.5",
           "Serilog": "2.11.0",
@@ -1201,6 +1202,14 @@
         "runtime": {
           "ETicaretAPI.Persistence.dll": {}
         }
+      },
+      "ETicaretAPI.SignalR/1.0.0": {
+        "dependencies": {
+          "ETicaretAPI.Application": "1.0.0"
+        },
+        "runtime": {
+          "ETicaretAPI.SignalR.dll": {}
+        }
       }
     }
   },
@@ -2094,6 +2103,11 @@
       "sha512": ""
     },
     "ETicaretAPI.Persistence/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ETicaretAPI.SignalR/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
