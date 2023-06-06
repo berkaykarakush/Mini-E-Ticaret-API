@@ -18,7 +18,9 @@ using Serilog.Sinks.PostgreSQL;
 using System.Security.Claims;
 using System.Text;
 
+
 var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddHttpContextAccessor();
 builder.Services.AddPersistenceServices();
 builder.Services.AddInfrastructreServices();
 builder.Services.AddApplicationServices();
