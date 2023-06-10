@@ -1,8 +1,8 @@
 ﻿using ETicaretAPI.Application.Abstractions.Services;
-using Microsoft.Extensions.Azure;
 using Microsoft.Extensions.Configuration;
 using System.Net;
 using System.Net.Mail;
+using System.Text;
 
 namespace ETicaretAPI.Infrastructure.Services
 {
@@ -15,12 +15,12 @@ namespace ETicaretAPI.Infrastructure.Services
             _configuration = configuration;
         }
 
-        public async Task SendMessageAsync(string to, string subject, string body, bool isBodyHtml = true)
+        public async Task SendMailAsync(string to, string subject, string body, bool isBodyHtml = true)
         {
-            await SendMessageAsync(new[] {to}, subject, body, isBodyHtml);
+            await SendMailAsync(new[] {to}, subject, body, isBodyHtml);
         }
 
-        public async Task SendMessageAsync(string[] tos, string subject, string body, bool isBodyHtml = true)
+        public async Task SendMailAsync(string[] tos, string subject, string body, bool isBodyHtml = true)
         {
             MailMessage mail = new MailMessage();
             foreach(var to in tos)
@@ -36,6 +36,20 @@ namespace ETicaretAPI.Infrastructure.Services
             smtp.EnableSsl = true;
             smtp.Host = _configuration["Mail:Host"];
             await smtp.SendMailAsync(mail);
+        }
+
+        public async Task SendPasswordResetMail(string to, string userId, string resetToken)
+        {
+            StringBuilder mail = new();
+            mail.Append("Merhaba<br>Eger yeni sifre talebinde bulunduysaniz asagidaki linkten sifrenizi yenileyebilirsiniz.<br><strong><a target=\"_blank\" href=\"");
+            mail.Append(_configuration["AngularClientUrl"]);
+            mail.Append("/update-password/");
+            mail.Append(userId);
+            mail.Append("/");
+            mail.Append(resetToken);
+            mail.Append("\">Yeni sifre talebi icin tiklayiniz.</a></strong>");
+            mail.Append("<br><br><br><br>Not: Eger bu talep tarafinizca gerceklestirilmediyse lutfen bu maili dikkate   almayiniz.<br><br><br>Saygilarimizla<br>Mini E-Ticaret");
+            await SendMailAsync(to, "Sifre Yenileme Talebi", mail.ToString());
         }
     }
 }
