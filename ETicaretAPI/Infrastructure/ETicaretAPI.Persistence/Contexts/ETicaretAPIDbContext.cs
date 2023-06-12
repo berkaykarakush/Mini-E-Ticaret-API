@@ -3,12 +3,6 @@ using ETicaretAPI.Domain.Entities.Common;
 using ETicaretAPI.Domain.Entities.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Data.Common;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ETicaretAPI.Persistence.Contexts
 {
@@ -24,6 +18,7 @@ namespace ETicaretAPI.Persistence.Contexts
         public DbSet<Domain.Entities.File> Files{ get; set; }
         public DbSet<ProductImageFile> ProductImageFiles { get; set; }
         public DbSet<InvoiceFile>  InvoiceFiles{ get; set; }
+        public DbSet<CompletedOrder>  CompletedOrders{ get; set; }
         protected override void OnModelCreating(ModelBuilder builder)
         {
             builder.Entity<Order>()
@@ -37,6 +32,11 @@ namespace ETicaretAPI.Persistence.Contexts
             builder.Entity<Order>()
                 .HasIndex(o => o.OrderCode)
                 .IsUnique();
+
+            builder.Entity<Order>()
+                .HasOne(o => o.CompletedOrder)
+                .WithOne(co => co.Order)
+                .HasForeignKey<CompletedOrder>(o => o.OrderId);
 
             base.OnModelCreating(builder);
         }

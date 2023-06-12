@@ -8,5 +8,6 @@
         public string Description { get; set; }
         public DateTime CreatedDate { get; set; }
         public object BasketItems { get; set; }
+        public bool Completed { get; set; }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using ETicaretAPI.Application.Abstractions.Services;
+using ETicaretAPI.Application.DTOs.Order;
 using Microsoft.Extensions.Configuration;
 using System.Net;
 using System.Net.Mail;
@@ -14,7 +15,6 @@ namespace ETicaretAPI.Infrastructure.Services
         {
             _configuration = configuration;
         }
-
         public async Task SendMailAsync(string to, string subject, string body, bool isBodyHtml = true)
         {
             await SendMailAsync(new[] {to}, subject, body, isBodyHtml);
@@ -50,6 +50,12 @@ namespace ETicaretAPI.Infrastructure.Services
             mail.Append("\">Yeni sifre talebi icin tiklayiniz.</a></strong>");
             mail.Append("<br><br><br><br>Not: Eger bu talep tarafinizca gerceklestirilmediyse lutfen bu maili dikkate   almayiniz.<br><br><br>Saygilarimizla<br>Mini E-Ticaret");
             await SendMailAsync(to, "Sifre Yenileme Talebi", mail.ToString());
+        }
+        public async Task<(bool, CompletedOrderDTO)> SendCompleteOrderMailAsync(string to, string orderCode, DateTime orderDate, string username)
+        {
+            string mail = $"Sayin {username} Merhaba<br>{orderDate} tarihinde olusturulan {orderCode} kodlu siparisiniz kargoya verilmistir.<br>Saygilarimizla<br>Mini E-Ticaret";
+            await SendMailAsync(to, $"{orderCode}'lu Siparisiniz Kargoya Verildi!", mail);
+            return new();
         }
     }
 }
