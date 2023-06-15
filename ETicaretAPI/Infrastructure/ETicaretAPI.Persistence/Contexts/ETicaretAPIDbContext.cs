@@ -19,6 +19,8 @@ namespace ETicaretAPI.Persistence.Contexts
         public DbSet<ProductImageFile> ProductImageFiles { get; set; }
         public DbSet<InvoiceFile>  InvoiceFiles{ get; set; }
         public DbSet<CompletedOrder>  CompletedOrders{ get; set; }
+        public DbSet<Menu>  Menus{ get; set; }
+        public DbSet<Endpoint> Endpoints{ get; set; }
         protected override void OnModelCreating(ModelBuilder builder)
         {
             builder.Entity<Order>()
