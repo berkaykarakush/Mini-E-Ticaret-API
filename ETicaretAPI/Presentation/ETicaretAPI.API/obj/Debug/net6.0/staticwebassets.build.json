@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "EetGTx8QDEPm0l5CpQqVmr3lqCBfJ5qi/USAzXkHhxo=",
+  "Hash": "NWSL8IuEZyDbHP6bf4mQOMY1ZMG4C4nve5ukWQcTUdI=",
   "Source": "ETicaretAPI.API",
   "BasePath": "_content/ETicaretAPI.API",
   "Mode": "Default",
@@ -17,23 +17,6 @@
   ],
   "Assets": [
     {
-      "Identity": "C:\\Users\\berka\\OneDrive\\Masaüstü\\Main\\Project\\ETicaretUygulamasi\\ETicaretAPI\\Presentation\\ETicaretAPI.API\\wwwroot\\resource\\files\\delete.png.png",
-      "SourceId": "ETicaretAPI.API",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\berka\\OneDrive\\Masaüstü\\Main\\Project\\ETicaretUygulamasi\\ETicaretAPI\\Presentation\\ETicaretAPI.API\\wwwroot\\",
-      "BasePath": "_content/ETicaretAPI.API",
-      "RelativePath": "resource/files/delete.png.png",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\resource\\files\\delete.png.png"
-    },
-    {
       "Identity": "C:\\Users\\berka\\OneDrive\\Masaüstü\\Main\\Project\\ETicaretUygulamasi\\ETicaretAPI\\Presentation\\ETicaretAPI.API\\wwwroot\\resource\\files\\delete-png.png",
       "SourceId": "ETicaretAPI.API",
       "SourceType": "Discovered",
@@ -49,6 +32,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\resource\\files\\delete-png.png"
+    },
+    {
+      "Identity": "C:\\Users\\berka\\OneDrive\\Masaüstü\\Main\\Project\\ETicaretUygulamasi\\ETicaretAPI\\Presentation\\ETicaretAPI.API\\wwwroot\\resource\\files\\delete.png.png",
+      "SourceId": "ETicaretAPI.API",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\berka\\OneDrive\\Masaüstü\\Main\\Project\\ETicaretUygulamasi\\ETicaretAPI\\Presentation\\ETicaretAPI.API\\wwwroot\\",
+      "BasePath": "_content/ETicaretAPI.API",
+      "RelativePath": "resource/files/delete.png.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\resource\\files\\delete.png.png"
     },
     {
       "Identity": "C:\\Users\\berka\\OneDrive\\Masaüstü\\Main\\Project\\ETicaretUygulamasi\\ETicaretAPI\\Presentation\\ETicaretAPI.API\\wwwroot\\resource\\files\\depositphotos238033930-stock-illustration-object-oriented-programming-icon-trendy.jpg",

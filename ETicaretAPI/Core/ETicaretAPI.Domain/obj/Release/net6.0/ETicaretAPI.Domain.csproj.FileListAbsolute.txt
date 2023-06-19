@@ -1,0 +1,12 @@
+C:\Users\berka\OneDrive\Masaüstü\Main\Project\ETicaretUygulamasi\ETicaretAPI\Core\ETicaretAPI.Domain\bin\Release\net6.0\ETicaretAPI.Domain.deps.json
+C:\Users\berka\OneDrive\Masaüstü\Main\Project\ETicaretUygulamasi\ETicaretAPI\Core\ETicaretAPI.Domain\bin\Release\net6.0\ETicaretAPI.Domain.dll
+C:\Users\berka\OneDrive\Masaüstü\Main\Project\ETicaretUygulamasi\ETicaretAPI\Core\ETicaretAPI.Domain\bin\Release\net6.0\ETicaretAPI.Domain.pdb
+C:\Users\berka\OneDrive\Masaüstü\Main\Project\ETicaretUygulamasi\ETicaretAPI\Core\ETicaretAPI.Domain\obj\Release\net6.0\ETicaretAPI.Domain.csproj.AssemblyReference.cache
+C:\Users\berka\OneDrive\Masaüstü\Main\Project\ETicaretUygulamasi\ETicaretAPI\Core\ETicaretAPI.Domain\obj\Release\net6.0\ETicaretAPI.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\berka\OneDrive\Masaüstü\Main\Project\ETicaretUygulamasi\ETicaretAPI\Core\ETicaretAPI.Domain\obj\Release\net6.0\ETicaretAPI.Domain.AssemblyInfoInputs.cache
+C:\Users\berka\OneDrive\Masaüstü\Main\Project\ETicaretUygulamasi\ETicaretAPI\Core\ETicaretAPI.Domain\obj\Release\net6.0\ETicaretAPI.Domain.AssemblyInfo.cs
+C:\Users\berka\OneDrive\Masaüstü\Main\Project\ETicaretUygulamasi\ETicaretAPI\Core\ETicaretAPI.Domain\obj\Release\net6.0\ETicaretAPI.Domain.csproj.CoreCompileInputs.cache
+C:\Users\berka\OneDrive\Masaüstü\Main\Project\ETicaretUygulamasi\ETicaretAPI\Core\ETicaretAPI.Domain\obj\Release\net6.0\ETicaretAPI.Domain.dll
+C:\Users\berka\OneDrive\Masaüstü\Main\Project\ETicaretUygulamasi\ETicaretAPI\Core\ETicaretAPI.Domain\obj\Release\net6.0\refint\ETicaretAPI.Domain.dll
+C:\Users\berka\OneDrive\Masaüstü\Main\Project\ETicaretUygulamasi\ETicaretAPI\Core\ETicaretAPI.Domain\obj\Release\net6.0\ETicaretAPI.Domain.pdb
+C:\Users\berka\OneDrive\Masaüstü\Main\Project\ETicaretUygulamasi\ETicaretAPI\Core\ETicaretAPI.Domain\obj\Release\net6.0\ref\ETicaretAPI.Domain.dll

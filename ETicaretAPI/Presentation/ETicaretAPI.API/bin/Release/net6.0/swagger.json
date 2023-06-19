@@ -1,0 +1,2976 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "ETicaretAPI.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
+    "version": "1.0"
+  },
+  "paths": {
+    "/api/ApplicationServices": {
+      "get": {
+        "tags": [
+          "ApplicationServices"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Auth/Login": {
+      "post": {
+        "tags": [
+          "Auth"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/LoginUserCommandRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Auth/RefreshTokenLogin": {
+      "post": {
+        "tags": [
+          "Auth"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/RefreshTokenLoginCommandRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Auth/google-login": {
+      "post": {
+        "tags": [
+          "Auth"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/GoogleLoginCommandRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Auth/facebook-login": {
+      "post": {
+        "tags": [
+          "Auth"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/FacebookLoginCommandRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Auth/password-reset": {
+      "post": {
+        "tags": [
+          "Auth"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/PasswordResetCommandRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Auth/verify-reset-token": {
+      "post": {
+        "tags": [
+          "Auth"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/VerifyResetTokenCommandRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/AuthorizationEndpoints/GetRolesToEndpoint": {
+      "post": {
+        "tags": [
+          "AuthorizationEndpoints"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/GetRolesToEndpointQueryRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/AuthorizationEndpoints": {
+      "post": {
+        "tags": [
+          "AuthorizationEndpoints"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/AssignRoleEndpointCommandRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Baskets": {
+      "get": {
+        "tags": [
+          "Baskets"
+        ],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "getBasketsItemsQueryRequest"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Baskets"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/AddItemToBasketCommandRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Baskets"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/UpdateQuantityCommandRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Baskets/{BasketItemId}": {
+      "delete": {
+        "tags": [
+          "Baskets"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "BasketItemId",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Files/GetBaseStorageUrl": {
+      "get": {
+        "tags": [
+          "Files"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Orders": {
+      "get": {
+        "tags": [
+          "Orders"
+        ],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "Page",
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "in": "query",
+            "name": "Size",
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Orders"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/CreateOrderCommandRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Orders/{Id}": {
+      "get": {
+        "tags": [
+          "Orders"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "Id",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Orders/complete-order/{Id}": {
+      "get": {
+        "tags": [
+          "Orders"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "Id",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Products": {
+      "get": {
+        "tags": [
+          "Products"
+        ],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "Page",
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "in": "query",
+            "name": "Size",
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Products"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/CreateProductCommandRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Products"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/UpdateProductCommandRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Products/{Id}": {
+      "get": {
+        "tags": [
+          "Products"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "Id",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Products"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "Id",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Products/Upload": {
+      "post": {
+        "tags": [
+          "Products"
+        ],
+        "consumes": [
+          "multipart/form-data"
+        ],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "Id",
+            "type": "string"
+          },
+          {
+            "in": "formData",
+            "name": "Files",
+            "type": "array",
+            "items": {
+              "format": "binary",
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Products/GetProductImages/{id}": {
+      "get": {
+        "tags": [
+          "Products"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "Id",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Products/DeleteProductImage/{Id}": {
+      "delete": {
+        "tags": [
+          "Products"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "Id",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "path",
+            "name": "ImageId",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "imageId",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Products/ChangeShowcaseImage": {
+      "get": {
+        "tags": [
+          "Products"
+        ],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "ImageId",
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "ProductId",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Products/qrcode/{productId}": {
+      "get": {
+        "tags": [
+          "Products"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "productId",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Products/qrcode": {
+      "put": {
+        "tags": [
+          "Products"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/UpdateStockQRCodeToProductCommandRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Roles": {
+      "get": {
+        "tags": [
+          "Roles"
+        ],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "Page",
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "in": "query",
+            "name": "Size",
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Roles"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/CreateRoleCommandRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Roles/{Id}": {
+      "get": {
+        "tags": [
+          "Roles"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "Id",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Roles"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "Id",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "path",
+            "name": "Name",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Roles"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "Id",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Users": {
+      "post": {
+        "tags": [
+          "Users"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/CreateUserCommandRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      },
+      "get": {
+        "tags": [
+          "Users"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Users/update-password": {
+      "post": {
+        "tags": [
+          "Users"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/UpdatePasswordCommandRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Users/get-all-users": {
+      "get": {
+        "tags": [
+          "Users"
+        ],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "Page",
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "in": "query",
+            "name": "Size",
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Users/get-roles-to-user/{UserId}": {
+      "get": {
+        "tags": [
+          "Users"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "UserId",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Users/assign-role-to-user": {
+      "post": {
+        "tags": [
+          "Users"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/AssignRoleToUserCommandRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "AddItemToBasketCommandRequest": {
+      "type": "object",
+      "properties": {
+        "productId": {
+          "type": "string"
+        },
+        "quantity": {
+          "format": "int32",
+          "type": "integer"
+        }
+      }
+    },
+    "Assembly": {
+      "type": "object",
+      "properties": {
+        "definedTypes": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/TypeInfo"
+          },
+          "readOnly": true
+        },
+        "exportedTypes": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Type"
+          },
+          "readOnly": true
+        },
+        "codeBase": {
+          "type": "string",
+          "readOnly": true
+        },
+        "entryPoint": {
+          "$ref": "#/definitions/MethodInfo"
+        },
+        "fullName": {
+          "type": "string",
+          "readOnly": true
+        },
+        "imageRuntimeVersion": {
+          "type": "string",
+          "readOnly": true
+        },
+        "isDynamic": {
+          "type": "boolean",
+          "readOnly": true
+        },
+        "location": {
+          "type": "string",
+          "readOnly": true
+        },
+        "reflectionOnly": {
+          "type": "boolean",
+          "readOnly": true
+        },
+        "isCollectible": {
+          "type": "boolean",
+          "readOnly": true
+        },
+        "isFullyTrusted": {
+          "type": "boolean",
+          "readOnly": true
+        },
+        "customAttributes": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/CustomAttributeData"
+          },
+          "readOnly": true
+        },
+        "escapedCodeBase": {
+          "type": "string",
+          "readOnly": true
+        },
+        "manifestModule": {
+          "$ref": "#/definitions/Module"
+        },
+        "modules": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Module"
+          },
+          "readOnly": true
+        },
+        "globalAssemblyCache": {
+          "type": "boolean",
+          "readOnly": true
+        },
+        "hostContext": {
+          "format": "int64",
+          "type": "integer",
+          "readOnly": true
+        },
+        "securityRuleSet": {
+          "$ref": "#/definitions/SecurityRuleSet"
+        }
+      }
+    },
+    "AssignRoleEndpointCommandRequest": {
+      "type": "object",
+      "properties": {
+        "roles": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "code": {
+          "type": "string"
+        },
+        "menu": {
+          "type": "string"
+        },
+        "type": {
+          "$ref": "#/definitions/Type"
+        }
+      }
+    },
+    "AssignRoleToUserCommandRequest": {
+      "type": "object",
+      "properties": {
+        "userId": {
+          "type": "string"
+        },
+        "roles": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "CallingConventions": {
+      "format": "int32",
+      "enum": [
+        1,
+        2,
+        3,
+        32,
+        64
+      ],
+      "type": "integer"
+    },
+    "ConstructorInfo": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "readOnly": true
+        },
+        "declaringType": {
+          "$ref": "#/definitions/Type"
+        },
+        "reflectedType": {
+          "$ref": "#/definitions/Type"
+        },
+        "module": {
+          "$ref": "#/definitions/Module"
+        },
+        "customAttributes": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/CustomAttributeData"
+          },
+          "readOnly": true
+        },
+        "isCollectible": {
+          "type": "boolean",
+          "readOnly": true
+        },
+        "metadataToken": {
+          "format": "int32",
+          "type": "integer",
+          "readOnly": true
+        },
+        "attributes": {
+          "$ref": "#/definitions/MethodAttributes"
+        },
+        "methodImplementationFlags": {
+          "$ref": "#/definitions/MethodImplAttributes"
+        },
+        "callingConvention": {
+          "$ref": "#/definitions/CallingConventions"
+        },
+        "isAbstract": {
+          "type": "boolean",
+          "readOnly": true
+        },
+        "isConstructor": {
+          "type": "boolean",
+          "readOnly": true
+        },
+        "isFinal": {
+          "type": "boolean",
+          "readOnly": true
+        },
+        "isHideBySig": {
+          "type": "boolean",
+          "readOnly": true
+        },
+        "isSpecialName": {
+          "type": "boolean",
+          "readOnly": true
+        },
+        "isStatic": {
+          "type": "boolean",
+          "readOnly": true
+        },
+        "isVirtual": {
+          "type": "boolean",
+          "readOnly": true
+        },
+        "isAssembly": {
+          "type": "boolean",
+          "readOnly": true
+        },
+        "isFamily": {
+          "type": "boolean",
+          "readOnly": true
+        },
+        "isFamilyAndAssembly": {
+          "type": "boolean",
+          "readOnly": true
+        },
+        "isFamilyOrAssembly": {
+          "type": "boolean",
+          "readOnly": true
+        },
+        "isPrivate": {
+          "type": "boolean",
+          "readOnly": true
+        },
+        "isPublic": {
+          "type": "boolean",
+          "readOnly": true
+        },
+        "isConstructedGenericMethod": {
+          "type": "boolean",
+          "readOnly": true
+        },
+        "isGenericMethod": {
+          "type": "boolean",
+          "readOnly": true
+        },
+        "isGenericMethodDefinition": {
+          "type": "boolean",
+          "readOnly": true
+        },
+        "containsGenericParameters": {
+          "type": "boolean",
+          "readOnly": true
+        },
+        "methodHandle": {
+          "$ref": "#/definitions/RuntimeMethodHandle"
+        },
+        "isSecurityCritical": {
+          "type": "boolean",
+          "readOnly": true
+        },
+        "isSecuritySafeCritical": {
+          "type": "boolean",
+          "readOnly": true
+        },
+        "isSecurityTransparent": {
+          "type": "boolean",
+          "readOnly": true
+        },
+        "memberType": {
+          "$ref": "#/definitions/MemberTypes"
+        }
+      }
+    },
+    "CreateOrderCommandRequest": {
+      "type": "object",
+      "properties": {
+        "address": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        }
+      }
+    },
+    "CreateProductCommandRequest": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "stock": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "price": {
+          "format": "float",
+          "type": "number"
+        }
+      }
+    },
+    "CreateRoleCommandRequest": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        }
+      }
+    },
+    "CreateUserCommandRequest": {
+      "type": "object",
+      "properties": {
+        "nameSurname": {
+          "type": "string"
+        },
+        "username": {
+          "type": "string"
+        },
+        "email": {
+          "type": "string"
+        },
+        "password": {
+          "type": "string"
+        },
+        "passwordConfirm": {
+          "type": "string"
+        }
+      }
+    },
+    "CustomAttributeData": {
+      "type": "object",
+      "properties": {
+        "attributeType": {
+          "$ref": "#/definitions/Type"
+        },
+        "constructor": {
+          "$ref": "#/definitions/ConstructorInfo"
+        },
+        "constructorArguments": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/CustomAttributeTypedArgument"
+          },
+          "readOnly": true
+        },
+        "namedArguments": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/CustomAttributeNamedArgument"
+          },
+          "readOnly": true
+        }
+      }
+    },
+    "CustomAttributeNamedArgument": {
+      "type": "object",
+      "properties": {
+        "memberInfo": {
+          "$ref": "#/definitions/MemberInfo"
+        },
+        "typedValue": {
+          "$ref": "#/definitions/CustomAttributeTypedArgument"
+        },
+        "memberName": {
+          "type": "string",
+          "readOnly": true
+        },
+        "isField": {
+          "type": "boolean",
+          "readOnly": true
+        }
+      }
+    },
+    "CustomAttributeTypedArgument": {
+      "type": "object",
+      "properties": {
+        "argumentType": {
+          "$ref": "#/definitions/Type"
+        },
+        "value": { }
+      }
+    },
+    "EventAttributes": {
+      "format": "int32",
+      "enum": [
+        0,
+        512,
+        1024
+      ],
+      "type": "integer"
+    },
+    "EventInfo": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "readOnly": true
+        },
+        "declaringType": {
+          "$ref": "#/definitions/Type"
+        },
+        "reflectedType": {
+          "$ref": "#/definitions/Type"
+        },
+        "module": {
+          "$ref": "#/definitions/Module"
+        },
+        "customAttributes": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/CustomAttributeData"
+          },
+          "readOnly": true
+        },
+        "isCollectible": {
+          "type": "boolean",
+          "readOnly": true
+        },
+        "metadataToken": {
+          "format": "int32",
+          "type": "integer",
+          "readOnly": true
+        },
+        "memberType": {
+          "$ref": "#/definitions/MemberTypes"
+        },
+        "attributes": {
+          "$ref": "#/definitions/EventAttributes"
+        },
+        "isSpecialName": {
+          "type": "boolean",
+          "readOnly": true
+        },
+        "addMethod": {
+          "$ref": "#/definitions/MethodInfo"
+        },
+        "removeMethod": {
+          "$ref": "#/definitions/MethodInfo"
+        },
+        "raiseMethod": {
+          "$ref": "#/definitions/MethodInfo"
+        },
+        "isMulticast": {
+          "type": "boolean",
+          "readOnly": true
+        },
+        "eventHandlerType": {
+          "$ref": "#/definitions/Type"
+        }
+      }
+    },
+    "FacebookLoginCommandRequest": {
+      "type": "object",
+      "properties": {
+        "authToken": {
+          "type": "string"
+        }
+      }
+    },
+    "FieldAttributes": {
+      "format": "int32",
+      "enum": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        16,
+        32,
+        64,
+        128,
+        256,
+        512,
+        1024,
+        4096,
+        8192,
+        32768,
+        38144
+      ],
+      "type": "integer"
+    },
+    "FieldInfo": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "readOnly": true
+        },
+        "declaringType": {
+          "$ref": "#/definitions/Type"
+        },
+        "reflectedType": {
+          "$ref": "#/definitions/Type"
+        },
+        "module": {
+          "$ref": "#/definitions/Module"
+        },
+        "customAttributes": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/CustomAttributeData"
+          },
+          "readOnly": true
+        },
+        "isCollectible": {
+          "type": "boolean",
+          "readOnly": true
+        },
+        "metadataToken": {
+          "format": "int32",
+          "type": "integer",
+          "readOnly": true
+        },
+        "memberType": {
+          "$ref": "#/definitions/MemberTypes"
+        },
+        "attributes": {
+          "$ref": "#/definitions/FieldAttributes"
+        },
+        "fieldType": {
+          "$ref": "#/definitions/Type"
+        },
+        "isInitOnly": {
+          "type": "boolean",
+          "readOnly": true
+        },
+        "isLiteral": {
+          "type": "boolean",
+          "readOnly": true
+        },
+        "isNotSerialized": {
+          "type": "boolean",
+          "readOnly": true
+        },
+        "isPinvokeImpl": {
+          "type": "boolean",
+          "readOnly": true
+        },
+        "isSpecialName": {
+          "type": "boolean",
+          "readOnly": true
+        },
+        "isStatic": {
+          "type": "boolean",
+          "readOnly": true
+        },
+        "isAssembly": {
+          "type": "boolean",
+          "readOnly": true
+        },
+        "isFamily": {
+          "type": "boolean",
+          "readOnly": true
+        },
+        "isFamilyAndAssembly": {
+          "type": "boolean",
+          "readOnly": true
+        },
+        "isFamilyOrAssembly": {
+          "type": "boolean",
+          "readOnly": true
+        },
+        "isPrivate": {
+          "type": "boolean",
+          "readOnly": true
+        },
+        "isPublic": {
+          "type": "boolean",
+          "readOnly": true
+        },
+        "isSecurityCritical": {
+          "type": "boolean",
+          "readOnly": true
+        },
+        "isSecuritySafeCritical": {
+          "type": "boolean",
+          "readOnly": true
+        },
+        "isSecurityTransparent": {
+          "type": "boolean",
+          "readOnly": true
+        },
+        "fieldHandle": {
+          "$ref": "#/definitions/RuntimeFieldHandle"
+        }
+      }
+    },
+    "GenericParameterAttributes": {
+      "format": "int32",
+      "enum": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        8,
+        16,
+        28
+      ],
+      "type": "integer"
+    },
+    "GetBasketsItemsQueryRequest": {
+      "type": "object"
+    },
+    "GetRolesToEndpointQueryRequest": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "string"
+        },
+        "menu": {
+          "type": "string"
+        }
+      }
+    },
+    "GoogleLoginCommandRequest": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "idToken": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "firstName": {
+          "type": "string"
+        },
+        "lastName": {
+          "type": "string"
+        },
+        "email": {
+          "type": "string"
+        },
+        "photoUrl": {
+          "type": "string"
+        },
+        "provider": {
+          "type": "string"
+        }
+      }
+    },
+    "ICustomAttributeProvider": {
+      "type": "object"
+    },
+    "IntPtr": {
+      "type": "object"
+    },
+    "LayoutKind": {
+      "format": "int32",
+      "enum": [
+        0,
+        2,
+        3
+      ],
+      "type": "integer"
+    },
+    "LoginUserCommandRequest": {
+      "type": "object",
+      "properties": {
+        "usernameOrEmail": {
+          "type": "string"
+        },
+        "password": {
+          "type": "string"
+        }
+      }
+    },
+    "MemberInfo": {
+      "type": "object",
+      "properties": {
+        "memberType": {
+          "$ref": "#/definitions/MemberTypes"
+        },
+        "declaringType": {
+          "$ref": "#/definitions/Type"
+        },
+        "reflectedType": {
+          "$ref": "#/definitions/Type"
+        },
+        "name": {
+          "type": "string",
+          "readOnly": true
+        },
+        "module": {
+          "$ref": "#/definitions/Module"
+        },
+        "customAttributes": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/CustomAttributeData"
+          },
+          "readOnly": true
+        },
+        "isCollectible": {
+          "type": "boolean",
+          "readOnly": true
+        },
+        "metadataToken": {
+          "format": "int32",
+          "type": "integer",
+          "readOnly": true
+        }
+      }
+    },
+    "MemberTypes": {
+      "format": "int32",
+      "enum": [
+        1,
+        2,
+        4,
+        8,
+        16,
+        32,
+        64,
+        128,
+        191
+      ],
+      "type": "integer"
+    },
+    "MethodAttributes": {
+      "format": "int32",
+      "enum": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        16,
+        32,
+        64,
+        128,
+        256,
+        512,
+        1024,
+        2048,
+        4096,
+        8192,
+        16384,
+        32768,
+        53248
+      ],
+      "type": "integer"
+    },
+    "MethodBase": {
+      "type": "object",
+      "properties": {
+        "memberType": {
+          "$ref": "#/definitions/MemberTypes"
+        },
+        "name": {
+          "type": "string",
+          "readOnly": true
+        },
+        "declaringType": {
+          "$ref": "#/definitions/Type"
+        },
+        "reflectedType": {
+          "$ref": "#/definitions/Type"
+        },
+        "module": {
+          "$ref": "#/definitions/Module"
+        },
+        "customAttributes": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/CustomAttributeData"
+          },
+          "readOnly": true
+        },
+        "isCollectible": {
+          "type": "boolean",
+          "readOnly": true
+        },
+        "metadataToken": {
+          "format": "int32",
+          "type": "integer",
+          "readOnly": true
+        },
+        "attributes": {
+          "$ref": "#/definitions/MethodAttributes"
+        },
+        "methodImplementationFlags": {
+          "$ref": "#/definitions/MethodImplAttributes"
+        },
+        "callingConvention": {
+          "$ref": "#/definitions/CallingConventions"
+        },
+        "isAbstract": {
+          "type": "boolean",
+          "readOnly": true
+        },
+        "isConstructor": {
+          "type": "boolean",
+          "readOnly": true
+        },
+        "isFinal": {
+          "type": "boolean",
+          "readOnly": true
+        },
+        "isHideBySig": {
+          "type": "boolean",
+          "readOnly": true
+        },
+        "isSpecialName": {
+          "type": "boolean",
+          "readOnly": true
+        },
+        "isStatic": {
+          "type": "boolean",
+          "readOnly": true
+        },
+        "isVirtual": {
+          "type": "boolean",
+          "readOnly": true
+        },
+        "isAssembly": {
+          "type": "boolean",
+          "readOnly": true
+        },
+        "isFamily": {
+          "type": "boolean",
+          "readOnly": true
+        },
+        "isFamilyAndAssembly": {
+          "type": "boolean",
+          "readOnly": true
+        },
+        "isFamilyOrAssembly": {
+          "type": "boolean",
+          "readOnly": true
+        },
+        "isPrivate": {
+          "type": "boolean",
+          "readOnly": true
+        },
+        "isPublic": {
+          "type": "boolean",
+          "readOnly": true
+        },
+        "isConstructedGenericMethod": {
+          "type": "boolean",
+          "readOnly": true
+        },
+        "isGenericMethod": {
+          "type": "boolean",
+          "readOnly": true
+        },
+        "isGenericMethodDefinition": {
+          "type": "boolean",
+          "readOnly": true
+        },
+        "containsGenericParameters": {
+          "type": "boolean",
+          "readOnly": true
+        },
+        "methodHandle": {
+          "$ref": "#/definitions/RuntimeMethodHandle"
+        },
+        "isSecurityCritical": {
+          "type": "boolean",
+          "readOnly": true
+        },
+        "isSecuritySafeCritical": {
+          "type": "boolean",
+          "readOnly": true
+        },
+        "isSecurityTransparent": {
+          "type": "boolean",
+          "readOnly": true
+        }
+      }
+    },
+    "MethodImplAttributes": {
+      "format": "int32",
+      "enum": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        8,
+        16,
+        32,
+        64,
+        128,
+        256,
+        512,
+        4096,
+        65535
+      ],
+      "type": "integer"
+    },
+    "MethodInfo": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "readOnly": true
+        },
+        "declaringType": {
+          "$ref": "#/definitions/Type"
+        },
+        "reflectedType": {
+          "$ref": "#/definitions/Type"
+        },
+        "module": {
+          "$ref": "#/definitions/Module"
+        },
+        "customAttributes": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/CustomAttributeData"
+          },
+          "readOnly": true
+        },
+        "isCollectible": {
+          "type": "boolean",
+          "readOnly": true
+        },
+        "metadataToken": {
+          "format": "int32",
+          "type": "integer",
+          "readOnly": true
+        },
+        "attributes": {
+          "$ref": "#/definitions/MethodAttributes"
+        },
+        "methodImplementationFlags": {
+          "$ref": "#/definitions/MethodImplAttributes"
+        },
+        "callingConvention": {
+          "$ref": "#/definitions/CallingConventions"
+        },
+        "isAbstract": {
+          "type": "boolean",
+          "readOnly": true
+        },
+        "isConstructor": {
+          "type": "boolean",
+          "readOnly": true
+        },
+        "isFinal": {
+          "type": "boolean",
+          "readOnly": true
+        },
+        "isHideBySig": {
+          "type": "boolean",
+          "readOnly": true
+        },
+        "isSpecialName": {
+          "type": "boolean",
+          "readOnly": true
+        },
+        "isStatic": {
+          "type": "boolean",
+          "readOnly": true
+        },
+        "isVirtual": {
+          "type": "boolean",
+          "readOnly": true
+        },
+        "isAssembly": {
+          "type": "boolean",
+          "readOnly": true
+        },
+        "isFamily": {
+          "type": "boolean",
+          "readOnly": true
+        },
+        "isFamilyAndAssembly": {
+          "type": "boolean",
+          "readOnly": true
+        },
+        "isFamilyOrAssembly": {
+          "type": "boolean",
+          "readOnly": true
+        },
+        "isPrivate": {
+          "type": "boolean",
+          "readOnly": true
+        },
+        "isPublic": {
+          "type": "boolean",
+          "readOnly": true
+        },
+        "isConstructedGenericMethod": {
+          "type": "boolean",
+          "readOnly": true
+        },
+        "isGenericMethod": {
+          "type": "boolean",
+          "readOnly": true
+        },
+        "isGenericMethodDefinition": {
+          "type": "boolean",
+          "readOnly": true
+        },
+        "containsGenericParameters": {
+          "type": "boolean",
+          "readOnly": true
+        },
+        "methodHandle": {
+          "$ref": "#/definitions/RuntimeMethodHandle"
+        },
+        "isSecurityCritical": {
+          "type": "boolean",
+          "readOnly": true
+        },
+        "isSecuritySafeCritical": {
+          "type": "boolean",
+          "readOnly": true
+        },
+        "isSecurityTransparent": {
+          "type": "boolean",
+          "readOnly": true
+        },
+        "memberType": {
+          "$ref": "#/definitions/MemberTypes"
+        },
+        "returnParameter": {
+          "$ref": "#/definitions/ParameterInfo"
+        },
+        "returnType": {
+          "$ref": "#/definitions/Type"
+        },
+        "returnTypeCustomAttributes": {
+          "$ref": "#/definitions/ICustomAttributeProvider"
+        }
+      }
+    },
+    "Module": {
+      "type": "object",
+      "properties": {
+        "assembly": {
+          "$ref": "#/definitions/Assembly"
+        },
+        "fullyQualifiedName": {
+          "type": "string",
+          "readOnly": true
+        },
+        "name": {
+          "type": "string",
+          "readOnly": true
+        },
+        "mdStreamVersion": {
+          "format": "int32",
+          "type": "integer",
+          "readOnly": true
+        },
+        "moduleVersionId": {
+          "format": "uuid",
+          "type": "string",
+          "readOnly": true
+        },
+        "scopeName": {
+          "type": "string",
+          "readOnly": true
+        },
+        "moduleHandle": {
+          "$ref": "#/definitions/ModuleHandle"
+        },
+        "customAttributes": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/CustomAttributeData"
+          },
+          "readOnly": true
+        },
+        "metadataToken": {
+          "format": "int32",
+          "type": "integer",
+          "readOnly": true
+        }
+      }
+    },
+    "ModuleHandle": {
+      "type": "object",
+      "properties": {
+        "mdStreamVersion": {
+          "format": "int32",
+          "type": "integer",
+          "readOnly": true
+        }
+      }
+    },
+    "ParameterAttributes": {
+      "format": "int32",
+      "enum": [
+        0,
+        1,
+        2,
+        4,
+        8,
+        16,
+        4096,
+        8192,
+        16384,
+        32768,
+        61440
+      ],
+      "type": "integer"
+    },
+    "ParameterInfo": {
+      "type": "object",
+      "properties": {
+        "attributes": {
+          "$ref": "#/definitions/ParameterAttributes"
+        },
+        "member": {
+          "$ref": "#/definitions/MemberInfo"
+        },
+        "name": {
+          "type": "string",
+          "readOnly": true
+        },
+        "parameterType": {
+          "$ref": "#/definitions/Type"
+        },
+        "position": {
+          "format": "int32",
+          "type": "integer",
+          "readOnly": true
+        },
+        "isIn": {
+          "type": "boolean",
+          "readOnly": true
+        },
+        "isLcid": {
+          "type": "boolean",
+          "readOnly": true
+        },
+        "isOptional": {
+          "type": "boolean",
+          "readOnly": true
+        },
+        "isOut": {
+          "type": "boolean",
+          "readOnly": true
+        },
+        "isRetval": {
+          "type": "boolean",
+          "readOnly": true
+        },
+        "defaultValue": {
+          "readOnly": true
+        },
+        "rawDefaultValue": {
+          "readOnly": true
+        },
+        "hasDefaultValue": {
+          "type": "boolean",
+          "readOnly": true
+        },
+        "customAttributes": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/CustomAttributeData"
+          },
+          "readOnly": true
+        },
+        "metadataToken": {
+          "format": "int32",
+          "type": "integer",
+          "readOnly": true
+        }
+      }
+    },
+    "PasswordResetCommandRequest": {
+      "type": "object",
+      "properties": {
+        "email": {
+          "type": "string"
+        }
+      }
+    },
+    "PropertyAttributes": {
+      "format": "int32",
+      "enum": [
+        0,
+        512,
+        1024,
+        4096,
+        8192,
+        16384,
+        32768,
+        62464
+      ],
+      "type": "integer"
+    },
+    "PropertyInfo": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "readOnly": true
+        },
+        "declaringType": {
+          "$ref": "#/definitions/Type"
+        },
+        "reflectedType": {
+          "$ref": "#/definitions/Type"
+        },
+        "module": {
+          "$ref": "#/definitions/Module"
+        },
+        "customAttributes": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/CustomAttributeData"
+          },
+          "readOnly": true
+        },
+        "isCollectible": {
+          "type": "boolean",
+          "readOnly": true
+        },
+        "metadataToken": {
+          "format": "int32",
+          "type": "integer",
+          "readOnly": true
+        },
+        "memberType": {
+          "$ref": "#/definitions/MemberTypes"
+        },
+        "propertyType": {
+          "$ref": "#/definitions/Type"
+        },
+        "attributes": {
+          "$ref": "#/definitions/PropertyAttributes"
+        },
+        "isSpecialName": {
+          "type": "boolean",
+          "readOnly": true
+        },
+        "canRead": {
+          "type": "boolean",
+          "readOnly": true
+        },
+        "canWrite": {
+          "type": "boolean",
+          "readOnly": true
+        },
+        "getMethod": {
+          "$ref": "#/definitions/MethodInfo"
+        },
+        "setMethod": {
+          "$ref": "#/definitions/MethodInfo"
+        }
+      }
+    },
+    "RefreshTokenLoginCommandRequest": {
+      "type": "object",
+      "properties": {
+        "refreshToken": {
+          "type": "string"
+        }
+      }
+    },
+    "RuntimeFieldHandle": {
+      "type": "object",
+      "properties": {
+        "value": {
+          "$ref": "#/definitions/IntPtr"
+        }
+      }
+    },
+    "RuntimeMethodHandle": {
+      "type": "object",
+      "properties": {
+        "value": {
+          "$ref": "#/definitions/IntPtr"
+        }
+      }
+    },
+    "RuntimeTypeHandle": {
+      "type": "object",
+      "properties": {
+        "value": {
+          "$ref": "#/definitions/IntPtr"
+        }
+      }
+    },
+    "SecurityRuleSet": {
+      "format": "int32",
+      "enum": [
+        0,
+        1,
+        2
+      ],
+      "type": "integer"
+    },
+    "StructLayoutAttribute": {
+      "type": "object",
+      "properties": {
+        "typeId": {
+          "readOnly": true
+        },
+        "value": {
+          "$ref": "#/definitions/LayoutKind"
+        }
+      }
+    },
+    "Type": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "readOnly": true
+        },
+        "customAttributes": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/CustomAttributeData"
+          },
+          "readOnly": true
+        },
+        "isCollectible": {
+          "type": "boolean",
+          "readOnly": true
+        },
+        "metadataToken": {
+          "format": "int32",
+          "type": "integer",
+          "readOnly": true
+        },
+        "isInterface": {
+          "type": "boolean",
+          "readOnly": true
+        },
+        "memberType": {
+          "$ref": "#/definitions/MemberTypes"
+        },
+        "namespace": {
+          "type": "string",
+          "readOnly": true
+        },
+        "assemblyQualifiedName": {
+          "type": "string",
+          "readOnly": true
+        },
+        "fullName": {
+          "type": "string",
+          "readOnly": true
+        },
+        "assembly": {
+          "$ref": "#/definitions/Assembly"
+        },
+        "module": {
+          "$ref": "#/definitions/Module"
+        },
+        "isNested": {
+          "type": "boolean",
+          "readOnly": true
+        },
+        "declaringType": {
+          "$ref": "#/definitions/Type"
+        },
+        "declaringMethod": {
+          "$ref": "#/definitions/MethodBase"
+        },
+        "reflectedType": {
+          "$ref": "#/definitions/Type"
+        },
+        "underlyingSystemType": {
+          "$ref": "#/definitions/Type"
+        },
+        "isTypeDefinition": {
+          "type": "boolean",
+          "readOnly": true
+        },
+        "isArray": {
+          "type": "boolean",
+          "readOnly": true
+        },
+        "isByRef": {
+          "type": "boolean",
+          "readOnly": true
+        },
+        "isPointer": {
+          "type": "boolean",
+          "readOnly": true
+        },
+        "isConstructedGenericType": {
+          "type": "boolean",
+          "readOnly": true
+        },
+        "isGenericParameter": {
+          "type": "boolean",
+          "readOnly": true
+        },
+        "isGenericTypeParameter": {
+          "type": "boolean",
+          "readOnly": true
+        },
+        "isGenericMethodParameter": {
+          "type": "boolean",
+          "readOnly": true
+        },
+        "isGenericType": {
+          "type": "boolean",
+          "readOnly": true
+        },
+        "isGenericTypeDefinition": {
+          "type": "boolean",
+          "readOnly": true
+        },
+        "isSZArray": {
+          "type": "boolean",
+          "readOnly": true
+        },
+        "isVariableBoundArray": {
+          "type": "boolean",
+          "readOnly": true
+        },
+        "isByRefLike": {
+          "type": "boolean",
+          "readOnly": true
+        },
+        "hasElementType": {
+          "type": "boolean",
+          "readOnly": true
+        },
+        "genericTypeArguments": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Type"
+          },
+          "readOnly": true
+        },
+        "genericParameterPosition": {
+          "format": "int32",
+          "type": "integer",
+          "readOnly": true
+        },
+        "genericParameterAttributes": {
+          "$ref": "#/definitions/GenericParameterAttributes"
+        },
+        "attributes": {
+          "$ref": "#/definitions/TypeAttributes"
+        },
+        "isAbstract": {
+          "type": "boolean",
+          "readOnly": true
+        },
+        "isImport": {
+          "type": "boolean",
+          "readOnly": true
+        },
+        "isSealed": {
+          "type": "boolean",
+          "readOnly": true
+        },
+        "isSpecialName": {
+          "type": "boolean",
+          "readOnly": true
+        },
+        "isClass": {
+          "type": "boolean",
+          "readOnly": true
+        },
+        "isNestedAssembly": {
+          "type": "boolean",
+          "readOnly": true
+        },
+        "isNestedFamANDAssem": {
+          "type": "boolean",
+          "readOnly": true
+        },
+        "isNestedFamily": {
+          "type": "boolean",
+          "readOnly": true
+        },
+        "isNestedFamORAssem": {
+          "type": "boolean",
+          "readOnly": true
+        },
+        "isNestedPrivate": {
+          "type": "boolean",
+          "readOnly": true
+        },
+        "isNestedPublic": {
+          "type": "boolean",
+          "readOnly": true
+        },
+        "isNotPublic": {
+          "type": "boolean",
+          "readOnly": true
+        },
+        "isPublic": {
+          "type": "boolean",
+          "readOnly": true
+        },
+        "isAutoLayout": {
+          "type": "boolean",
+          "readOnly": true
+        },
+        "isExplicitLayout": {
+          "type": "boolean",
+          "readOnly": true
+        },
+        "isLayoutSequential": {
+          "type": "boolean",
+          "readOnly": true
+        },
+        "isAnsiClass": {
+          "type": "boolean",
+          "readOnly": true
+        },
+        "isAutoClass": {
+          "type": "boolean",
+          "readOnly": true
+        },
+        "isUnicodeClass": {
+          "type": "boolean",
+          "readOnly": true
+        },
+        "isCOMObject": {
+          "type": "boolean",
+          "readOnly": true
+        },
+        "isContextful": {
+          "type": "boolean",
+          "readOnly": true
+        },
+        "isEnum": {
+          "type": "boolean",
+          "readOnly": true
+        },
+        "isMarshalByRef": {
+          "type": "boolean",
+          "readOnly": true
+        },
+        "isPrimitive": {
+          "type": "boolean",
+          "readOnly": true
+        },
+        "isValueType": {
+          "type": "boolean",
+          "readOnly": true
+        },
+        "isSignatureType": {
+          "type": "boolean",
+          "readOnly": true
+        },
+        "isSecurityCritical": {
+          "type": "boolean",
+          "readOnly": true
+        },
+        "isSecuritySafeCritical": {
+          "type": "boolean",
+          "readOnly": true
+        },
+        "isSecurityTransparent": {
+          "type": "boolean",
+          "readOnly": true
+        },
+        "structLayoutAttribute": {
+          "$ref": "#/definitions/StructLayoutAttribute"
+        },
+        "typeInitializer": {
+          "$ref": "#/definitions/ConstructorInfo"
+        },
+        "typeHandle": {
+          "$ref": "#/definitions/RuntimeTypeHandle"
+        },
+        "guid": {
+          "format": "uuid",
+          "type": "string",
+          "readOnly": true
+        },
+        "baseType": {
+          "$ref": "#/definitions/Type"
+        },
+        "isSerializable": {
+          "type": "boolean",
+          "readOnly": true
+        },
+        "containsGenericParameters": {
+          "type": "boolean",
+          "readOnly": true
+        },
+        "isVisible": {
+          "type": "boolean",
+          "readOnly": true
+        }
+      }
+    },
+    "TypeAttributes": {
+      "format": "int32",
+      "enum": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        16,
+        24,
+        32,
+        128,
+        256,
+        1024,
+        2048,
+        4096,
+        8192,
+        16384,
+        65536,
+        131072,
+        196608,
+        262144,
+        264192,
+        1048576,
+        12582912
+      ],
+      "type": "integer"
+    },
+    "TypeInfo": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "readOnly": true
+        },
+        "customAttributes": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/CustomAttributeData"
+          },
+          "readOnly": true
+        },
+        "isCollectible": {
+          "type": "boolean",
+          "readOnly": true
+        },
+        "metadataToken": {
+          "format": "int32",
+          "type": "integer",
+          "readOnly": true
+        },
+        "isInterface": {
+          "type": "boolean",
+          "readOnly": true
+        },
+        "memberType": {
+          "$ref": "#/definitions/MemberTypes"
+        },
+        "namespace": {
+          "type": "string",
+          "readOnly": true
+        },
+        "assemblyQualifiedName": {
+          "type": "string",
+          "readOnly": true
+        },
+        "fullName": {
+          "type": "string",
+          "readOnly": true
+        },
+        "assembly": {
+          "$ref": "#/definitions/Assembly"
+        },
+        "module": {
+          "$ref": "#/definitions/Module"
+        },
+        "isNested": {
+          "type": "boolean",
+          "readOnly": true
+        },
+        "declaringType": {
+          "$ref": "#/definitions/Type"
+        },
+        "declaringMethod": {
+          "$ref": "#/definitions/MethodBase"
+        },
+        "reflectedType": {
+          "$ref": "#/definitions/Type"
+        },
+        "underlyingSystemType": {
+          "$ref": "#/definitions/Type"
+        },
+        "isTypeDefinition": {
+          "type": "boolean",
+          "readOnly": true
+        },
+        "isArray": {
+          "type": "boolean",
+          "readOnly": true
+        },
+        "isByRef": {
+          "type": "boolean",
+          "readOnly": true
+        },
+        "isPointer": {
+          "type": "boolean",
+          "readOnly": true
+        },
+        "isConstructedGenericType": {
+          "type": "boolean",
+          "readOnly": true
+        },
+        "isGenericParameter": {
+          "type": "boolean",
+          "readOnly": true
+        },
+        "isGenericTypeParameter": {
+          "type": "boolean",
+          "readOnly": true
+        },
+        "isGenericMethodParameter": {
+          "type": "boolean",
+          "readOnly": true
+        },
+        "isGenericType": {
+          "type": "boolean",
+          "readOnly": true
+        },
+        "isGenericTypeDefinition": {
+          "type": "boolean",
+          "readOnly": true
+        },
+        "isSZArray": {
+          "type": "boolean",
+          "readOnly": true
+        },
+        "isVariableBoundArray": {
+          "type": "boolean",
+          "readOnly": true
+        },
+        "isByRefLike": {
+          "type": "boolean",
+          "readOnly": true
+        },
+        "hasElementType": {
+          "type": "boolean",
+          "readOnly": true
+        },
+        "genericTypeArguments": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Type"
+          },
+          "readOnly": true
+        },
+        "genericParameterPosition": {
+          "format": "int32",
+          "type": "integer",
+          "readOnly": true
+        },
+        "genericParameterAttributes": {
+          "$ref": "#/definitions/GenericParameterAttributes"
+        },
+        "attributes": {
+          "$ref": "#/definitions/TypeAttributes"
+        },
+        "isAbstract": {
+          "type": "boolean",
+          "readOnly": true
+        },
+        "isImport": {
+          "type": "boolean",
+          "readOnly": true
+        },
+        "isSealed": {
+          "type": "boolean",
+          "readOnly": true
+        },
+        "isSpecialName": {
+          "type": "boolean",
+          "readOnly": true
+        },
+        "isClass": {
+          "type": "boolean",
+          "readOnly": true
+        },
+        "isNestedAssembly": {
+          "type": "boolean",
+          "readOnly": true
+        },
+        "isNestedFamANDAssem": {
+          "type": "boolean",
+          "readOnly": true
+        },
+        "isNestedFamily": {
+          "type": "boolean",
+          "readOnly": true
+        },
+        "isNestedFamORAssem": {
+          "type": "boolean",
+          "readOnly": true
+        },
+        "isNestedPrivate": {
+          "type": "boolean",
+          "readOnly": true
+        },
+        "isNestedPublic": {
+          "type": "boolean",
+          "readOnly": true
+        },
+        "isNotPublic": {
+          "type": "boolean",
+          "readOnly": true
+        },
+        "isPublic": {
+          "type": "boolean",
+          "readOnly": true
+        },
+        "isAutoLayout": {
+          "type": "boolean",
+          "readOnly": true
+        },
+        "isExplicitLayout": {
+          "type": "boolean",
+          "readOnly": true
+        },
+        "isLayoutSequential": {
+          "type": "boolean",
+          "readOnly": true
+        },
+        "isAnsiClass": {
+          "type": "boolean",
+          "readOnly": true
+        },
+        "isAutoClass": {
+          "type": "boolean",
+          "readOnly": true
+        },
+        "isUnicodeClass": {
+          "type": "boolean",
+          "readOnly": true
+        },
+        "isCOMObject": {
+          "type": "boolean",
+          "readOnly": true
+        },
+        "isContextful": {
+          "type": "boolean",
+          "readOnly": true
+        },
+        "isEnum": {
+          "type": "boolean",
+          "readOnly": true
+        },
+        "isMarshalByRef": {
+          "type": "boolean",
+          "readOnly": true
+        },
+        "isPrimitive": {
+          "type": "boolean",
+          "readOnly": true
+        },
+        "isValueType": {
+          "type": "boolean",
+          "readOnly": true
+        },
+        "isSignatureType": {
+          "type": "boolean",
+          "readOnly": true
+        },
+        "isSecurityCritical": {
+          "type": "boolean",
+          "readOnly": true
+        },
+        "isSecuritySafeCritical": {
+          "type": "boolean",
+          "readOnly": true
+        },
+        "isSecurityTransparent": {
+          "type": "boolean",
+          "readOnly": true
+        },
+        "structLayoutAttribute": {
+          "$ref": "#/definitions/StructLayoutAttribute"
+        },
+        "typeInitializer": {
+          "$ref": "#/definitions/ConstructorInfo"
+        },
+        "typeHandle": {
+          "$ref": "#/definitions/RuntimeTypeHandle"
+        },
+        "guid": {
+          "format": "uuid",
+          "type": "string",
+          "readOnly": true
+        },
+        "baseType": {
+          "$ref": "#/definitions/Type"
+        },
+        "isSerializable": {
+          "type": "boolean",
+          "readOnly": true
+        },
+        "containsGenericParameters": {
+          "type": "boolean",
+          "readOnly": true
+        },
+        "isVisible": {
+          "type": "boolean",
+          "readOnly": true
+        },
+        "genericTypeParameters": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Type"
+          },
+          "readOnly": true
+        },
+        "declaredConstructors": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ConstructorInfo"
+          },
+          "readOnly": true
+        },
+        "declaredEvents": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/EventInfo"
+          },
+          "readOnly": true
+        },
+        "declaredFields": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/FieldInfo"
+          },
+          "readOnly": true
+        },
+        "declaredMembers": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/MemberInfo"
+          },
+          "readOnly": true
+        },
+        "declaredMethods": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/MethodInfo"
+          },
+          "readOnly": true
+        },
+        "declaredNestedTypes": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/TypeInfo"
+          },
+          "readOnly": true
+        },
+        "declaredProperties": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/PropertyInfo"
+          },
+          "readOnly": true
+        },
+        "implementedInterfaces": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Type"
+          },
+          "readOnly": true
+        }
+      }
+    },
+    "UpdatePasswordCommandRequest": {
+      "type": "object",
+      "properties": {
+        "userId": {
+          "type": "string"
+        },
+        "resetToken": {
+          "type": "string"
+        },
+        "password": {
+          "type": "string"
+        },
+        "passwordConfirm": {
+          "type": "string"
+        }
+      }
+    },
+    "UpdateProductCommandRequest": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "stock": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "price": {
+          "format": "float",
+          "type": "number"
+        }
+      }
+    },
+    "UpdateQuantityCommandRequest": {
+      "type": "object",
+      "properties": {
+        "basketItemId": {
+          "type": "string"
+        },
+        "quantity": {
+          "format": "int32",
+          "type": "integer"
+        }
+      }
+    },
+    "UpdateStockQRCodeToProductCommandRequest": {
+      "type": "object",
+      "properties": {
+        "productId": {
+          "type": "string"
+        },
+        "stock": {
+          "format": "int32",
+          "type": "integer"
+        }
+      }
+    },
+    "VerifyResetTokenCommandRequest": {
+      "type": "object",
+      "properties": {
+        "resetToken": {
+          "type": "string"
+        },
+        "userId": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}
