@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "gwAWGKhTDoJ9NtQqUuFiSYY9+jR0RvPvEdY+rcx9/5HH2lKgizqO6oWBf+qDmhMsjQF6KSEWb0eKeheQU4SViQ==",
+  "dgSpecHash": "6tpOGkrmdGw+ixx0Hg48e/BQd5jYT6OAWMhiHOqOGC3hTvib4TmH87JSAQt/A2Ein7ExQWIBsRwdWFH8A8/jog==",
   "success": true,
   "projectFilePath": "C:\\Users\\berka\\OneDrive\\Masaüstü\\Main\\Project\\ETicaretUygulamasi\\ETicaretAPI\\Infrastructure\\ETicaretAPI.Infrastructure\\ETicaretAPI.Infrastructure.csproj",
   "expectedPackageFiles": [
@@ -60,6 +60,7 @@
     "C:\\Users\\berka\\.nuget\\packages\\microsoft.net.http.headers\\2.1.1\\microsoft.net.http.headers.2.1.1.nupkg.sha512",
     "C:\\Users\\berka\\.nuget\\packages\\microsoft.netcore.platforms\\2.0.0\\microsoft.netcore.platforms.2.0.0.nupkg.sha512",
     "C:\\Users\\berka\\.nuget\\packages\\microsoft.win32.registry\\4.5.0\\microsoft.win32.registry.4.5.0.nupkg.sha512",
+    "C:\\Users\\berka\\.nuget\\packages\\qrcoder\\1.4.3\\qrcoder.1.4.3.nupkg.sha512",
     "C:\\Users\\berka\\.nuget\\packages\\system.buffers\\4.5.0\\system.buffers.4.5.0.nupkg.sha512",
     "C:\\Users\\berka\\.nuget\\packages\\system.diagnostics.diagnosticsource\\4.6.0\\system.diagnostics.diagnosticsource.4.6.0.nupkg.sha512",
     "C:\\Users\\berka\\.nuget\\packages\\system.identitymodel.tokens.jwt\\6.10.0\\system.identitymodel.tokens.jwt.6.10.0.nupkg.sha512",

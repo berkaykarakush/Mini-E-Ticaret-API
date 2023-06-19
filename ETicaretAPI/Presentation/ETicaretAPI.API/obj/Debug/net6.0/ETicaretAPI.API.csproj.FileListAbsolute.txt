@@ -111,3 +111,4 @@ C:\Users\berka\OneDrive\Masaüstü\Main\Project\ETicaretUygulamasi\ETicaretAPI\P
 C:\Users\berka\OneDrive\Masaüstü\Main\Project\ETicaretUygulamasi\ETicaretAPI\Presentation\ETicaretAPI.API\bin\Debug\net6.0\Serilog.Sinks.Seq.dll
 C:\Users\berka\OneDrive\Masaüstü\Main\Project\ETicaretUygulamasi\ETicaretAPI\Presentation\ETicaretAPI.API\bin\Debug\net6.0\ETicaretAPI.SignalR.dll
 C:\Users\berka\OneDrive\Masaüstü\Main\Project\ETicaretUygulamasi\ETicaretAPI\Presentation\ETicaretAPI.API\bin\Debug\net6.0\ETicaretAPI.SignalR.pdb
+C:\Users\berka\OneDrive\Masaüstü\Main\Project\ETicaretUygulamasi\ETicaretAPI\Presentation\ETicaretAPI.API\bin\Debug\net6.0\QRCoder.dll

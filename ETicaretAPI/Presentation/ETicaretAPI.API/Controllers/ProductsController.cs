@@ -1,9 +1,12 @@
-﻿using ETicaretAPI.Application.Consts;
+﻿using Azure.Core;
+using ETicaretAPI.Application.Abstractions.Services;
+using ETicaretAPI.Application.Consts;
 using ETicaretAPI.Application.CustomAttributes;
 using ETicaretAPI.Application.Enums;
 using ETicaretAPI.Application.Features.Commands.Product.CreateProduct;
 using ETicaretAPI.Application.Features.Commands.Product.RemoveProduct;
 using ETicaretAPI.Application.Features.Commands.Product.UpdateProduct;
+using ETicaretAPI.Application.Features.Commands.Product.UpdateStockQRCodeToProduct;
 using ETicaretAPI.Application.Features.Commands.ProductImageFile.ChangeShowcaseImage;
 using ETicaretAPI.Application.Features.Commands.ProductImageFile.RemoveProductImage;
 using ETicaretAPI.Application.Features.Commands.ProductImageFile.UploadProductImage;
@@ -22,9 +25,11 @@ namespace ETicaretAPI.API.Controllers
     public class ProductsController : ControllerBase
     {
         readonly IMediator _mediator;
-        public ProductsController(IMediator mediator)
+        readonly IProductService _productService;
+        public ProductsController(IMediator mediator, IProductService productService)
         {
             _mediator = mediator;
+            _productService = productService;
         }
         [HttpGet]
         public async Task<IActionResult> Get([FromQuery] GetAllProductQueryRequest getAllProductQueryRequest)
@@ -96,5 +101,18 @@ namespace ETicaretAPI.API.Controllers
             ChangeShowcaseImageCommandResponse response = await _mediator.Send(changeShowcaseImageCommandRequest);
             return Ok(response);
         }
+        [HttpGet("qrcode/{productId}")]
+        public async Task<IActionResult> GetQRCodeToProduct([FromRoute]string productId)
+        {
+            var data = await _productService.QRCodeToProductAsync(productId);
+            return File(data, "image/png");
+        }
+        [HttpPut("qrcode")]
+        public async Task<IActionResult> UpdateStockQRCodeToProduct(UpdateStockQRCodeToProductCommandRequest updateStockQRCodeToProductCommandRequest)
+        {
+            UpdateStockQRCodeToProductCommandResponse response = await _mediator.Send(updateStockQRCodeToProductCommandRequest);
+            return Ok(response);
+        }
+
     }
 }
