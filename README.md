@@ -13,7 +13,7 @@ It is a mini e-commerce project that I created using Restful API.
 ## Built With
 <h3>Front-End</h3>
 </hr>
-<div style="display:flex"><img alt="Javascript" src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" />
+<div style="display:flex"><img alt="TypeScript" src="https://img.shields.io/badge/typescript-F7DF1E?style=for-the-badge&logo=typescript&logoColor=black" />
 <img alt="" src="https://img.shields.io/badge/angular-CA4245?style=for-the-badge&logo=angular&logoColor=white" />
 <img alt="" src="https://img.shields.io/badge/Angular_Material-CA4245?style=for-the-badge&logo=angular-material&logoColor=white" />
 <img alt="" src="https://img.shields.io/badge/Sass-CC6699?style=for-the-badge&logo=sass&logoColor=white" />
