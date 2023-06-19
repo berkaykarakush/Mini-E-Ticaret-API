@@ -11,16 +11,6 @@ It is a mini e-commerce project that I created using Restful API.
 </br></br>
 
 ## Built With
-<h3>Front-End</h3>
-</hr>
-<div style="display:flex"><img alt="TypeScript" src="https://img.shields.io/badge/typescript-F7DF1E?style=for-the-badge&logo=typescript&logoColor=black" />
-<img alt="" src="https://img.shields.io/badge/angular-CA4245?style=for-the-badge&logo=angular&logoColor=white" />
-<img alt="" src="https://img.shields.io/badge/Angular_Material-CA4245?style=for-the-badge&logo=angular-material&logoColor=white" />
-<img alt="" src="https://img.shields.io/badge/Sass-CC6699?style=for-the-badge&logo=sass&logoColor=white" />
-<img alt="" src="https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white" />
-<img alt="" src="https://img.shields.io/badge/HTML-E34F26?style=for-the-badge&logo=html&logoColor=white" /></div>
-<img alt="" src="https://img.shields.io/badge/CSS-E34F26?style=for-the-badge&logo=css&logoColor=white" /></div>
-</br>
 <h3>Back-End</h3>
 </hr>
 <div style="display:flex">
