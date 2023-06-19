@@ -1,6 +1,6 @@
 # Mini-E-Ticaret-API
 
-![alt text]([http://url/to/img.png](https://github.com/berkaykarakush/Mini-E-Ticaret-API/blob/dev/1.png?raw=true))
+![alt text](https://github.com/berkaykarakush/Mini-E-Ticaret-API/blob/dev/1.png?raw=true)
 ![alt text](https://github.com/berkaykarakush/Mini-E-Ticaret-API/blob/dev/2.png?raw=true)
 ![alt text](https://github.com/berkaykarakush/Mini-E-Ticaret-API/blob/dev/3.png?raw=true)
 ![alt text](https://github.com/berkaykarakush/Mini-E-Ticaret-API/blob/dev/4.png?raw=true)
